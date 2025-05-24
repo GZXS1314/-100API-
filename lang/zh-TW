@@ -1,1 +1,77 @@
+<?php
+// Traditional Chinese translations
+$lang = [
+    'app' => [
+        'title' => '物流查詢',
+        'subtitle' => '輕鬆追蹤您的訂單配送狀態',
+    ],
+    'form' => [
+        'tracking_no_label' => '快遞單號 (Tracking Number)',
+        'tracking_no_placeholder' => '請輸入快遞單號',
+        'phone_label' => '收/寄件人手機號 (Phone Number - 順豐必填)',
+        'phone_placeholder' => '順豐快遞必填，其他選填',
+        'carrier_label' => '快遞公司 (Courier)',
+        'carrier_placeholder' => '-- 請選擇 --',
+        'submit_button' => '查詢物流',
+    ],
+    'errors' => [
+        'missing_tracking_no' => '請輸入快遞單號。',
+        'invalid_tracking_length' => '快遞單號長度應為6到32個字符。',
+        'missing_carrier' => '請選擇快遞公司。',
+        'sf_phone_required' => '查詢順豐快遞時，必須填寫手機號碼。',
+        'curl_error' => '查詢接口時發生錯誤 (cURL Error #%s): %s',
+        'json_decode_error' => '解析API響應時發生錯誤。原始響應：%s',
+        'api_return_code_error' => 'API錯誤 (%s): %s',
+        'api_sign_error_hint' => ' 請檢查簽名(sign)生成方式是否正確：param的JSON字符串 + API Key + Customer ID，然後進行MD5加密並轉為32位大寫。',
+        'api_quota_error_hint' => ' API Key已過期或沒有可用單量，請充值。',
+        'api_general_error' => '查詢失敗: %s',
+        'no_tracking_data' => '查詢成功，但暫無物流信息。請稍後再試或檢查單號/公司是否正確。',
+        'api_message_hint' => ' (API Message: %s)',
+        'api_code_hint' => ' (代碼: %s)',
+        'tracking_not_found_title' => '暫無物流信息',
+        'tracking_not_found_message' => '查詢成功，但該單號暫無物流追蹤信息。請稍後再試或確認單號是否正確。',
+        'back_button' => '返回查詢',
+    ],
+    'results' => [
+        'details_title' => '物流詳情',
+        'carrier_label' => '快遞公司',
+        'tracking_no_label' => '快遞單號',
+        'current_status_label' => '當前狀態',
+        'origin_label' => '始發地',
+        'current_city_label' => '當前城市',
+        'destination_label' => '目的地',
+        'trajectory_title' => '物流軌跡',
+        'unknown_status' => '未知狀態 (%s)',
+        'status' => [ // Kuaidi100 state codes - Translate these if needed
+            '0' => '在途',
+            '1' => '攬收',
+            '2' => '疑難',
+            '3' => '簽收',
+            '4' => '退簽',
+            '5' => '派件',
+            '6' => '退回',
+            '7' => '轉投',
+            '8' => '清關',
+            '10' => '待清關',
+            '11' => '清關中',
+            '12' => '已清關',
+            '13' => '清關異常',
+            '14' => '拒簽'
+        ],
+         'status_info_labels' => [ // Labels for status info fields in timeline
+            'status' => '狀態',
+            'statusCode' => '狀態碼',
+            'areaName' => '區域',
+            'location' => '位置',
+        ],
+    ],
+    'footer' => [
+        'caution' => '',
+        'copyright' => '物流查詢',
+    ],
+     'carriers' => [ // Display names for carriers
+        'shunfeng' => '順豐BUY (SF BUY)',
+        'dhl' => 'DHL', // Often stays the same
+    ]
+];
 
