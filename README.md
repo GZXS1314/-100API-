@@ -1,4 +1,3 @@
-![wechat_2025-05-24_185857_381](https://github.com/user-attachments/assets/0e9b3b1e-53af-448d-9dcd-4d6719b6f1b9)
 ![wechat_2025-05-24_190025_878](https://github.com/user-attachments/assets/4969163c-37f3-4bb9-8fed-a3405b4f9cff)
 一、实时快递查询接口
 用户向接口提交快递单号后，接口会实时调取快递公司的单号信息并返回此单号最新的物流信息，包括物流轨迹、状态、时间等。
