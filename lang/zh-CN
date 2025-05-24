@@ -1,1 +1,77 @@
+<?php
+// Simplified Chinese translations
+$lang = [
+    'app' => [
+        'title' => '物流查询',
+        'subtitle' => '轻松追踪您的订单配送状态',
+    ],
+    'form' => [
+        'tracking_no_label' => '快递单号 (Tracking Number)',
+        'tracking_no_placeholder' => '请输入快递单号',
+        'phone_label' => '收/寄件人手机号 (Phone Number - 顺丰必填)',
+        'phone_placeholder' => '顺丰快递必填，其他选填',
+        'carrier_label' => '快递公司 (Courier)',
+        'carrier_placeholder' => '-- 请选择 --',
+        'submit_button' => '查询物流',
+    ],
+    'errors' => [
+        'missing_tracking_no' => '请输入快递单号。',
+        'invalid_tracking_length' => '快递单号长度应为6到32个字符。',
+        'missing_carrier' => '请选择快递公司。',
+        'sf_phone_required' => '查询顺丰快递时，必须填写手机号码。',
+        'curl_error' => '查询接口时发生错误 (cURL Error #%s): %s', // %s placeholders for error code/message
+        'json_decode_error' => '解析API响应时发生错误。原始响应：%s',
+        'api_return_code_error' => 'API错误 (%s): %s', // %s placeholders for return code/message
+        'api_sign_error_hint' => ' 请检查签名(sign)生成方式是否正确：param的JSON字符串 + API Key + Customer ID，然后进行MD5加密并转为32位大写。',
+        'api_quota_error_hint' => ' API Key已过期或没有可用单量，请充值。',
+        'api_general_error' => '查询失败: %s',
+        'no_tracking_data' => '查询成功，但暂无物流信息。请稍后再试或检查单号/公司是否正确。',
+        'api_message_hint' => ' (API Message: %s)', // Used with no_tracking_data
+        'api_code_hint' => ' (代码: %s)', // Used with api_general_error
+        'tracking_not_found_title' => '暂无物流信息',
+        'tracking_not_found_message' => '查询成功，但该单号暂无物流跟踪信息。请稍后再试或确认单号是否正确。',
+        'back_button' => '返回查询',
+    ],
+    'results' => [
+        'details_title' => '物流详情',
+        'carrier_label' => '快递公司',
+        'tracking_no_label' => '快递单号',
+        'current_status_label' => '当前状态',
+        'origin_label' => '始发地',
+        'current_city_label' => '当前城市',
+        'destination_label' => '目的地',
+        'trajectory_title' => '物流轨迹',
+        'unknown_status' => '未知状态 (%s)', // %s for status code
+        'status' => [ // Kuaidi100 state codes
+            '0' => '在途',
+            '1' => '揽收',
+            '2' => '疑难',
+            '3' => '签收',
+            '4' => '退签',
+            '5' => '派件',
+            '6' => '退回',
+            '7' => '转投',
+            '8' => '清关',
+            '10' => '待清关',
+            '11' => '清关中',
+            '12' => '已清关',
+            '13' => '清关异常',
+            '14' => '拒签'
+        ],
+        'status_info_labels' => [ // Labels for status info fields in timeline
+            'status' => '状态',
+            'statusCode' => '状态码',
+            'areaName' => '区域',
+            'location' => '位置',
+        ],
+    ],
+    'footer' => [
+        'caution' => '',
+        'copyright' => '江硕虾肉 · 物流查询工具',
+    ],
+    'carriers' => [ // Display names for carriers
+        'shunfeng' => '顺丰BUY (SF BUY)',
+        'dhl' => 'DHL',
+    ]
+];
 
