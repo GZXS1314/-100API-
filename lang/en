@@ -1,1 +1,77 @@
+<?php
+// English translations
+$lang = [
+    'app' => [
+        'title' => 'Logistics Tracking',
+        'subtitle' => 'Easily track the delivery status of your order',
+    ],
+    'form' => [
+        'tracking_no_label' => 'Tracking Number',
+        'tracking_no_placeholder' => 'Enter tracking number',
+        'phone_label' => 'Phone Number (Required for SF)',
+        'phone_placeholder' => 'Required for SF, optional for others',
+        'carrier_label' => 'Courier',
+        'carrier_placeholder' => '-- Select --',
+        'submit_button' => 'Track Logistics',
+    ],
+     'errors' => [
+        'missing_tracking_no' => 'Please enter the tracking number.',
+        'invalid_tracking_length' => 'Tracking number length should be between 6 and 32 characters.',
+        'missing_carrier' => 'Please select a courier company.',
+        'sf_phone_required' => 'Phone number is required for SF Express queries.',
+        'curl_error' => 'Error querying the API (cURL Error #%s): %s',
+        'json_decode_error' => 'Error parsing API response. Raw response: %s',
+        'api_return_code_error' => 'API Error (%s): %s',
+        'api_sign_error_hint' => ' Please check if the signature (sign) generation method is correct: param JSON string + API Key + Customer ID, then MD5 and convert to 32-bit uppercase.',
+        'api_quota_error_hint' => ' API Key has expired or no quota available, please recharge.',
+        'api_general_error' => 'Query failed: %s',
+        'no_tracking_data' => 'Query successful, but no logistics information available yet. Please try again later or check the tracking number/company.',
+         'api_message_hint' => ' (API Message: %s)',
+         'api_code_hint' => ' (Code: %s)',
+        'tracking_not_found_title' => 'No Logistics Information Available',
+        'tracking_not_found_message' => 'Query successful, but no tracking information is available for this number. Please try again later or confirm the number is correct.',
+        'back_button' => 'Back to Query',
+    ],
+    'results' => [
+        'details_title' => 'Logistics Details',
+        'carrier_label' => 'Courier Company',
+        'tracking_no_label' => 'Tracking Number',
+        'current_status_label' => 'Current Status',
+        'origin_label' => 'Origin',
+        'current_city_label' => 'Current City',
+        'destination_label' => 'Destination',
+        'trajectory_title' => 'Tracking Trajectory',
+        'unknown_status' => 'Unknown Status (%s)',
+         'status' => [ // Kuaidi100 state codes - Translate these if needed
+            '0' => 'In Transit',
+            '1' => 'Picked Up',
+            '2' => 'Problem',
+            '3' => 'Signed',
+            '4' => 'Rejected',
+            '5' => 'Out for Delivery',
+            '6' => 'Returned',
+            '7' => 'Transferred',
+            '8' => 'Customs Clearance',
+            '10' => 'Pending Clearance',
+            '11' => 'Clearing Customs',
+            '12' => 'Cleared Customs',
+            '13' => 'Customs Anomaly',
+            '14' => 'Rejected by Consignee'
+        ],
+         'status_info_labels' => [ // Labels for status info fields in timeline
+            'status' => 'Status',
+            'statusCode' => 'Status Code',
+            'areaName' => 'Area',
+            'location' => 'Location',
+        ],
+    ],
+    'footer' => [
+        'caution' => '',
+        'copyright' => 'Logistics Tracking',
+    ],
+    'carriers' => [ // Display names for carriers
+        'shunfeng' => 'SF BUY', // Or "SF Express BUY"
+        'dhl' => 'DHL',
+    ]
+];
 
